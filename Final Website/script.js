@@ -47,6 +47,56 @@
 //     console.log (i)
 // }
 
+// DOM
+
+window.addEventListener('DOMContentLoaded', () => {
+    const desc = document.getElementById('desc');
+    desc.textContent = 'Aspiring Web Developer & UX Designer!';
+
+    const box1 = document.getElementById('Box1');
+    box1.style.backgroundColor = '#af984cff';
+    box1.style.color = 'white';
+
+    const jsSkill = document.getElementById('JS');
+    jsSkill.textContent = 'JavaScript From JS';
+
+    const firstLabel = document.getElementById('first_label');
+    firstLabel.textContent = 'Full Name:';
+
+    const newSkill = document.createElement('li');
+    newSkill.textContent = 'Node.js';
+    newSkill.style.color = 'blue';
+    const skillsList = document.querySelector('ul');
+    skillsList.appendChild(newSkill);
+
+    const header = document.querySelector('.header');
+
+    header.onclick = () => {
+        alert('Why did you do that? you woke me up!');
+    };
+
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Submit button clicked.');
+    });
+
+    const yellow = document.getElementById('Box1');
+
+    yellow.addEventListener('mouseenter', () => {
+        yellow.style.backgroundColor = '#23b895';
+        yellow.textContent = "I am not yellow (for real)";
+    });
+
+    yellow.addEventListener('mouseleave', () => {
+        yellow.textContent = "Software Engineer";
+        yellow.style.backgroundColor = '#af984cff';
+    });
+});
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
 function hello () {
     console.log ("Welcome!")
 }
